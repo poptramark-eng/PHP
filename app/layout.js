@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
      crossorigin="anonymous"></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <AdSenseBlock />
+        
         <Navbar />
         <main className="container my-4">{children}</main>
         
