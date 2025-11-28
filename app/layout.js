@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         
         <Navbar />
         <main className="container my-4">{children}</main>
-        
+        <AdSenseBlock />
         <Footer />
 
         {/* ✅ Bootstrap JS (for navbar collapse, modals, etc.) */}
