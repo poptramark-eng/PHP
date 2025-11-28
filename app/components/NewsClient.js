@@ -26,7 +26,7 @@ export default function NewsClient({ category }) {
 
   return (
     <div>
-<h2 className="text-light fw-bold mb-4 text-uppercase">
+<h2 className="text-dark fw-bold mb-4 text-uppercase">
   {category} Headlines
 </h2>
 

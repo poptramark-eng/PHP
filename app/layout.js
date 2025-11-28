@@ -2,7 +2,7 @@ import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
 import AdSenseBlock from "./components/AdSenseBlock";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "NewsPortal | Latest Business, Sports, Technology & Entertainment Headlines",
-  description: "Stay updated with NewsPortal — your trusted source for breaking news, business insights, sports highlights, health updates, science discoveries, technology trends, and entertainment stories. Built by Mark Machukhu, a Software Engineering student at Kisisi University, this contemporary portal delivers fast, reliable, and AdSense‑ready headlines with a clean, modern design.",
+  description:
+    "Stay updated with NewsPortal — your trusted source for breaking news, business insights, sports highlights, health updates, science discoveries, technology trends, and entertainment stories. Built by Mark Machukhu, a Software Engineering student at Kisisi University, this contemporary portal delivers fast, reliable, and AdSense‑ready headlines with a clean, modern design.",
 };
 
 export default function RootLayout({ children }) {
@@ -24,22 +25,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* ✅ Bootstrap CSS */}
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-          crossOrigin="anonymous"
-        />
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossOrigin="anonymous"></link>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-dark text-light`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar />
-        <div className="container my-3">
-          <AdSenseBlock />
-        </div>
-        <main className="container py-5 bg-dark text-light">
-          {children}
-        </main>
+        <main className="container my-4">{children}</main>
+        <AdSenseBlock />
         <Footer />
+
+        {/* ✅ Bootstrap JS (for navbar collapse, modals, etc.) */}
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
       </body>
     </html>
   );
