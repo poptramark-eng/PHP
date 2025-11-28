@@ -39,9 +39,7 @@ export default function RootLayout({ children }) {
         {/* ✅ Bootstrap JS (for navbar collapse, modals, etc.) */}
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossOrigin="anonymous"></script>
       </body>
-  <amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-6884321061151028">
-</amp-auto-ads>
+
     </html>
   );
 }
