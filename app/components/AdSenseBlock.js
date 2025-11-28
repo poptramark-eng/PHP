@@ -6,12 +6,12 @@ export default function AdSenseBlock() {
   const adRef = useRef(null);
 
   useEffect(() => {
-    if (adRef.current && !adRef.current.hasAttribute("data-adsbygoogle-status")) {
-      try {
+    try {
+      if (adRef.current && !adRef.current.hasAttribute("data-adsbygoogle-status")) {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error("AdSense error:", e);
       }
+    } catch (e) {
+      console.error("AdSense error:", e);
     }
   }, []);
 
@@ -19,11 +19,11 @@ export default function AdSenseBlock() {
     <ins
       ref={adRef}
       className="adsbygoogle"
-      style={{ display: "block" }}
-      data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
-      data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
-      data-ad-format="auto"
-      data-full-width-responsive="true"
+      style={{ display: "block", textAlign: "center" }}
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-6884321061151028"
+      data-ad-slot="4528275669"
     ></ins>
   );
 }
