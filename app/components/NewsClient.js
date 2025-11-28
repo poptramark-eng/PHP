@@ -67,6 +67,7 @@ export default function NewsClient({ category }) {
                 >
                   Read More
                 </a>
+                    <AdSenseBlock />
               </div>
             </div>
           </div>
