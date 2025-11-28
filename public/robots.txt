@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive or non-public routes
+Disallow: /admin/
+Disallow: /api/
+
+# Point bots to sitemap (using env value)
+Sitemap: NEXT_PUBLIC_SITE_URL/sitemap.xml
