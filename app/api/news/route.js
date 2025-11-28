@@ -5,7 +5,7 @@ export async function GET(request) {
   const category = searchParams.get("category") || "general";
 
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEWS_API_KEY}`
+    `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${process.env.NEWS_API_KEY}`
   );
 
   const data = await res.json();
