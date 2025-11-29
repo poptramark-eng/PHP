@@ -1,6 +1,5 @@
 // app/api/news/route.js
 export async function GET(request) {
-  console.log("API KEY:", process.env.NEWS_API_KEY);
   const { searchParams } = new URL(request.url);
   const category = searchParams.get("category") || "general";
 
